@@ -14,13 +14,13 @@
     <br />
     <br />
     <div v-for="(item,i) in todos" :key="i">
-      <input type="checkbox" @click="method2(i)" :checked="checkAll"/>
+      <input type="checkbox" @click="method2(i)" :checked="checkAll" />
       {{item}}
     </div>
     <!-- <br />
     <span>Checked names: {{ remove }}</span>
     <br />
-    <span>List: {{ todos }}</span> -->
+    <span>List: {{ todos }}</span>-->
     <br />
     <br />
     <button @click="removeTask()">Remove</button>
@@ -35,7 +35,7 @@ export default {
       todos: [],
       remove: [],
       task: "",
-      checkAll: false, 
+      checkAll: false,
       isChecked: false
     };
   },
@@ -43,12 +43,12 @@ export default {
     addTask() {
       this.todos.push(this.task);
       this.task = "";
-      return
+      return;
     },
     removeTask() {
       if (this.checkAll) {
         this.todos = "";
-        this.checkAll=!this.checkAll
+        this.checkAll = !this.checkAll;
       } else {
         for (let i = 0; i < this.remove.length; i++) {
           this.todos.splice(this.todos.indexOf(this.remove[i]), 1);
@@ -62,13 +62,13 @@ export default {
       if (this.checkAll) {
         this.remove = this.todos;
       }
-      return
+      return;
     },
     method2(i) {
       if (!this.checkAll) {
         this.remove.push(this.todos[i]);
       }
-      return
+      return;
     }
   }
 };
