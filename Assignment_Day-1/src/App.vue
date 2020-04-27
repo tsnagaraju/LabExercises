@@ -1,34 +1,22 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <!-- <task1/>
+  <task1/>
   <br> <br>
-  <task2/> -->
-  <statesand-cities>
-  </statesand-cities>
-  <br>
-  <br>
-  <arrayof-products>
-  </arrayof-products>
+  <task2/>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-// import Task1 from './components/Task1.vue'
-// import Task2 from './components/Task2.vue'
-import StatesandCities from './components/StatesandCities.vue'
-import ArrayofProducts from './components/ArrayofProducts.vue'
+import HelloWorld from './components/HelloWorld.vue'
+import Task1 from './components/Task1.vue'
+import Task2 from './components/Task2.vue'
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld
-    // Task1,
-    // Task2
-    StatesandCities,
-    ArrayofProducts
+    HelloWorld,
+    Task1,
+    Task2
   }
 }
 </script>
